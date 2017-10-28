@@ -102,7 +102,103 @@ Que MERDA estou preso nessa droga de sala!!
 </tw-passagedata><tw-passagedata pid="16" name="Usar a chave" tags="" position="609,266">Ok, vamos lá... Meeerda!! a chave não gira!! Estou preso nessa droga de sala!
 POW POW POW! Tem alguém aí! Estou preso!! Aguém me escuta!!!
 [[Explorar o local]]
-</tw-passagedata><tw-passagedata pid="17" name="boate" tags="" position="1150,86">Clique duas vezes nessa passagem para editá-la.</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="17" name="boate" tags="" position="1357,52">Lanna me ajuda a chegar ao salão de uma boate onde está tendo uma rave, agora entendo o porque da música abafada e das luzes piscando.
+Mas porque eu estava preso lá??
+E quem é essa mulher que me ajudou? Porque eu me sinto tão bem ao lado dela? E que lugar é esse? eu me sinto tão bem aqui, parece tão familiar, parece tão perfeito.
+Que estranha sensação de segurança é essa? Não entendo, mas é tão bom... depois de tudo que passei, porque não aproveitar isso?
+Derrepente senti um puxão em meu braço, era Lanna me puxando para a pista de dança.
+Não conseguir me conter, toda a anciedade, preocupações e medos haviam sumido, estava me sentindo livre! Aquilo era tudo que eu queria na vida.
+Não sei quanto tempo passamos dançando, poderia ter sido horas, dias, semanas, o tempo não fazia mais sentido.
+Mas Lanna parou, me puxou para perto de si e falou: - Vamos fugir daqui! Vamos viver juntos, apenas eu e você, viver uma vida apenas nossa?
+[[Não! Pra que mudar? Temos tudo aqui, vamos ficar pelo menos mais um dia.|FicarNaBoate]]
+[[Porquê mudar? Está tudo perfeito! |Aceitar]]</tw-passagedata><tw-passagedata pid="18" name="FicarNaBoate" tags="" position="1282,201">Eu não queria perder nenhum segundo daquele momento tudo estava perfeito.
+Voltamos dançar por horas. Mas algo começou a me incomodar, aquelas dores que senti quando estava preso começaram a voltar, mas mesmo assim eu não queria para.
+[[Ignorar a dor | IgnorarDor]]
+(if: $comprimidos &gt; 0)[[[Tomar um comprimido | TomarComprimido]]]</tw-passagedata><tw-passagedata pid="19" name="Aceitar" tags="" position="1535,88">Lanna: - Posso te levar a um lugar onde você pode recuperar sua memória.
+Minha memória! Era a única coisa que faltava para ser tudo completo, e com a Lanna ao meu lado posso enfrentar qualquer aventura.
+[[- Vamos nessa Lanna, rumo a uma nova vida! | NoCarro]]
+</tw-passagedata><tw-passagedata pid="20" name=" NoCarro" tags="" position="1650,245">Lanna para o carro em frente a uma cafeteria e me pergunta: - Você confia em mim?
+Sim (click:&quot;Sim&quot;)´[(set:$teamo to 0)(goto:&quot;cafeteria&quot;)] 
+Eu te amo (click:&quot;Eu te amo&quot;)´[(set:$teamo to 1)(goto:&quot;cafeteria&quot;)]
+</tw-passagedata><tw-passagedata pid="21" name=" IgnorarDor" tags="" position="1207,352">Essa dor vai passar, não quero parar, não agora...
+MINHA CABEÇA!!! Não estou conseguindo enxergar! O remé[[...|Início]]
+</tw-passagedata><tw-passagedata pid="22" name=" TomarComprimido" tags="" position="1321,352">O comprimido! Lembrei que estavam no meu bolso.
+Não pensei duas vezes e tomei o último.(set: $comprimidos to $comprimidos - 1)
+Me dei conta de que ainda não sabia quem eu era e nem como tinha chegado naquele lugar. Mas mesmo assim minha maior vontade era ignorar e continuar vivendo da mesma maneira.
+[[Continuar Dançando]]
+[[Para de Dançar | NoBar]]</tw-passagedata><tw-passagedata pid="23" name="Continuar Dançando" tags="" position="1247,502">Decido ignorar aqueles pensamentos e continuar vivendo aquele momento.
+Continuamos a dançar por horas, até que novamente meus olhos escureceram e desta vez não tinha mais nenhum comprimido[[...|Início]]</tw-passagedata><tw-passagedata pid="24" name=" NoBar" tags="" position="1397,502">- Lanna, vamos para outro lugar.
+Lana me leva para uma mesa no bar que está abastecida com comidas e bebidas que mais gosto.
+Tudo perfeito!
+Sentei-me a mesa com Lanna e desfrutamos daquele momento juntos.
+Percebi que ao centro da mesa havia uma câmera de video. O display estava quebrado e ela não ligava, parecia que a bateria estava descarregada.
+(if: $bateria is 1)[Pego a bateria que está no meu bolso e coloco na câmera.
+Apesar do display quebrado, consigo escutar o som que foi gravado.
+Câmera: - Bryan Shelter, o que você me diz sobre essa noite?
+Era a voz de Lanna falando animadamente.
+Mas antes que pudesse escutar o restante, Lanna me interrompe: - Vamos fugir daqui!]
+(else:)[Continuamos conversando, bebendo e comento, até que Lanna me pergunta: - Vamos fugir daqui!]
+[[Negar]]
+[[Aceitar]]</tw-passagedata><tw-passagedata pid="25" name="Negar" tags="" position="1268,682">(if: $bateria is 1)[Eu precisava saber o que estava naquela gravação. Mas ao continuar sinto uma forte pontada nos meus ouvidos, a dor é tanta que caio no chão e desmaio[[...|Início]]]
+(else:)[Nunca, aquele era o dia perfeito continuamos comendo bebendo e conversando, e subtamente sinto uma forte pontada nos meus ouvidos, a dor é tanta que caio no chão e desmaio[[...|Início]]]</tw-passagedata><tw-passagedata pid="26" name="cafeteria" tags="" position="1725,395">(if: $teamo is 1)[Aproximo meu rosto de Lanna e lhe dou um beijo apaixonado, quela era a mulher da minha vida. 
+- Sim, eu te amo. Olhando no fundo dos seus olhos.]
+(else:)[Olhando no fundo dos seus olhos, digo: - Sim]
+Lanna me leva para uma sala nos fundo da cafeteria, o que vejo por lá é uma cena assustadora.
+Varias pessoas desacordadas e algumas pessoas andando descontroladamente pelo espaço falando coisas indecifraveis.
+Era a primeira vez que via algo imperfeito naquele mundo.
+Reconheço uma das pessoas que está desacordada, ela era uma das DJs que tocava na rave, e próximo a ela sem controle estava sua parceira de picapes. 
+Corro em direção a ela para tira-la daquele transe. Mas uma voz ao fundo da sala corta o ar.
+- Pare! Isso não irá adiantar em nada. Ela perdeu seu propósito.
+Um homem mais velho se aproxima com ajuda de uma mulher muito bonita, ruiva, com sarnas nas bochechas e olhos verdes esmeralda. Eles não pareciam ser pai e fila mas ela aparentava uns 30 anos mais novo do que ele.
+Era a primeira vez que via alguem daquela idade desde que acordei, mas Abraham sabia exatamente quem era e onde estava, e ele tinha decidido viver assim o resto de sua vida, pesar de seu estado demostrar claramente que seu fim estava próximo
+Ele me explicou o que havia acontecido com aquelas pessoas que estavam na sala. 
+Blacked eyes era o nome do processo que permitia que a aquelas pessoas vivessem seus sonhos em loop por toda sua existência e que ao final de cada dia suas memórias seriam apagadas e viveriam novamente aqueles dias perfeitos como se fosse a primeira vez.
+[[Lanna e Ingrid se retiram da sala | Fuga]]</tw-passagedata><tw-passagedata pid="27" name=" Fuga" tags="" position="1725,546">Inesperadamente Abraham começa a ter uma crise de dores na cabeça e vertigem.
+- SOCORRO! Alguem ajude. 
+Grito desesperadamente, mas ninguem responde.
+Abraham tira do bolso de sua calça uma frasco de remédio e o derruba no chão, eu pego o fraco e percebo que existe apenas um comprimido dentro mas do na etiqueta do lado de fora está escrito: Bryan Shelter.
+Aquele era meu nome, ou o nome que estava sendo chamado.
+Vejo Abraham agonizado mas mesmo assim decido tomar o último comprimido.
+Quase que de imediato, sinto meu corpo caindo vagarosamente no chão e minha visão escurecendo[[...|NoHospital]]
+</tw-passagedata><tw-passagedata pid="28" name="NoHospital" tags="" position="1725,695">Acordo, mas minha visão está embçada, a algo sobre meus olhos.
+Passo a mão e retiro uma película escura de cima deles.
+Olho para o lado e vejo Lanna dormindo em uma poltrona. Logo percebo que estou em um hospital.
+- Onde estou?
+- Bryan! você voltou! Diz Lanna em lagrimas.
+- Você sofreu um acidente, precisamos colocar você em um coma induzido, os médicos estavam com medo que você perdesse sua memória para sempre e o colocaram em uma espécie de realidade alternativa.
+Você está bem? Você se lembra de alguma coisa?
+Uma enfermeira entra no quarto e começa a checar meu estado nos aparelhos.
+Apesar do choque, começo a ficar mais tranquilo por Lanna estar ao meu lado.
+Uma picada me distrai, a enfermeira está coletando sangue. Quando olho em sua direção percebe os olhos verdes cor de esmeralda, o cabelo ruivo e as sarnas nas bochechas.
+Empurro a enfermeira para longe, derrubando os isntrumentos e chamando a atenção de todos no corredor.
+Dr. A. Rift: - Calma, você acabou de sair de um coma profundo, é normal ter confusões mentais depois de tanto tempo. Nós sempre estivemos aqui, você deve ter criado esses personagens em seus sonhos mas nós somos de carne e osso.
+Me afasto de todos de dentro do apartamento.
+Lanna, Dr. A. Rift e a enfermeira tentam me acalmar, mas percebo através da janela interna duas moças caminhando pelo corredor fazendo gestos de dança como se estivessem em uma rave.  
+[[Saio em disparanda rumo ao terraço do hospital.| terraço]]
+
+</tw-passagedata><tw-passagedata pid="29" name=" terraço" tags="" position="1725,845">Vou para o parapeito do terraço, estou pronto para por um fim a aquela loucura.
+Mas Lanna vai ao meu encontro, ela tem um poder incrível sobre mim, ela sabe exatamente como agir em todas as horas em que eu mais preciso.
+Ela é perfeita, perfeita demais para ser verdade, como se ela tivesse sido criada para servir esse propósito.
+
+Olho chorando no fundo dos olhos de Lanna, sorrio e falo: - Quem sou eu? Onde estou? 
+[[Sem esperanças me atiro do terraço-&gt;Início]]
+[[volto com Lanna para o hospital | VoltarHospital]]
+[[Jogo Lanna do terraço | Quarto]]
+</tw-passagedata><tw-passagedata pid="30" name=" VoltarHospital" tags="" position="1509,930">Lanna me convence que tudo não passa da minha imaginação, eu a amo e confio plenamente nela.
+Saimos do hospital e fomos para nossa casa.
+Tudo estava perfeito novamente.
+A noite dormimos juntos e pela manhã do dia seguinte [[...|NoHospital]]</tw-passagedata><tw-passagedata pid="31" name=" Quarto" tags="" position="1875,995">Com muita dor, empurro Lanna da marquise do prédio, minha dor é tamanha que caio de joelhos, e meus olhos escurecem com minhas lágrimas e tudo fica preto...
+(click:&quot;...&quot;)[
+Abro os olhos e percebe um peso e um calor em meu rosto. Estendo as mãos sobre minha face e retiro do meu rosto um óculos de realidade virtual, agora me lembro onde estou e quem eu sou.
+
+Me levanto vou até a cozinha e suspiro: (click:&quot;suspiro&quot;) [- Fuuuuhh, mais um dia!]
+
+Como alguma coisa, volto para seu quarto e exclamo:(click:&quot;exclamo&quot;) [ - Amanhã começa tudo de novo!]
+
+E enquanto relaxo em minha cama, vagarosamente meus olhos escurecem...
+
+FIM
+]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
