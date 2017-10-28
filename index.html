@@ -44,11 +44,12 @@ Consigo ver que tem alguns armários e alguns gaveteiros na sala, da para perceb
 - Estou ficando ancioso, parece que meu coração vai sair pela boca, o que está acontecendo comigo[[...-&gt;Ficar esperando imóvel]]
 ]
 (if: $count is 3)[
-- A MINHA CABEÇA!! Parece quer vai explodir, não consigo enxergar direiro; acho que vou apagar... não posso deixar isso acontecer.
+- MINHA CABEÇA!! Parece quer vai explodir, não consigo enxergar direiro; acho que vou apagar... não posso deixar isso acontecer.
 (if: $comprimidos &gt; 0)[
 - Será que devo tomar um comprimido??
 [Tomar]&lt;tomar|(click: ?tomar)[ (set: $action to  &quot;- Incrível! Já estou me sentindo um pouco melhor.&quot;)(set: $comprimidos to $comprimidos - 1)(goto:&quot;Ficar esperando imóvel&quot;)
 ] ou [Não tomar]&lt;nao|(click:?nao)[(set: $action to  &quot;- Essa não! acho que vou&quot;)(goto:&quot;Ficar esperando imóvel&quot;)]]
+(else:)[[[...-&gt;Ficar esperando imóvel]]]
 ]
 (if: $count is 4)[
 (print: $action)
@@ -57,7 +58,7 @@ Consigo ver que tem alguns armários e alguns gaveteiros na sala, da para perceb
 (if: $comprimidos is 2)[
 (set: $comprimidos to $comprimidos - 1)
 E antes que eu pudesse dizer algo, ela pega um dos comprimidos do frasco e me faz enguli-lo.
-]
+](else-if: $comprimidos is 0)[- Tome isso, empurrando um comprimido em minha garganta.]
 - Meu nome é Bryan?! Quem é você? 
 - Sim, seu nome é Bryan, e eu sou Lanna. Respondeu ela olhando no fundo dos meus olhos com uma voz doce e um sorriso no rosto. 
 - Vamos sair daqui. Disse ela me ajudando a sair do chão e caminhar pela porta.(click:&quot;porta&quot;)[(goto:&quot;boate&quot;)]
@@ -111,15 +112,15 @@ Não conseguir me conter, toda a anciedade, preocupações e medos haviam sumido
 Não sei quanto tempo passamos dançando, poderia ter sido horas, dias, semanas, o tempo não fazia mais sentido.
 Mas Lanna parou, me puxou para perto de si e falou: - Vamos fugir daqui! Vamos viver juntos, apenas eu e você, viver uma vida apenas nossa?
 [[Não! Pra que mudar? Temos tudo aqui, vamos ficar pelo menos mais um dia.|FicarNaBoate]]
-[[Porquê mudar? Está tudo perfeito! |Aceitar]]</tw-passagedata><tw-passagedata pid="18" name="FicarNaBoate" tags="" position="1282,201">Eu não queria perder nenhum segundo daquele momento tudo estava perfeito.
+[[Porquê mudar? Está tudo perfeito!-&gt;Aceitar]]</tw-passagedata><tw-passagedata pid="18" name="FicarNaBoate" tags="" position="1282,201">Eu não queria perder nenhum segundo daquele momento tudo estava perfeito.
 Voltamos dançar por horas. Mas algo começou a me incomodar, aquelas dores que senti quando estava preso começaram a voltar, mas mesmo assim eu não queria para.
 [[Ignorar a dor | IgnorarDor]]
-(if: $comprimidos &gt; 0)[[[Tomar um comprimido | TomarComprimido]]]</tw-passagedata><tw-passagedata pid="19" name="Aceitar" tags="" position="1535,88">Lanna: - Posso te levar a um lugar onde você pode recuperar sua memória.
+(if: $comprimidos &gt; 0)[[[Tomar um comprimido | TomarComprimido]]]</tw-passagedata><tw-passagedata pid="19" name="Aceitar" tags="" position="1680,66.33333333333333">Lanna: - Posso te levar a um lugar onde você pode recuperar sua memória.
 Minha memória! Era a única coisa que faltava para ser tudo completo, e com a Lanna ao meu lado posso enfrentar qualquer aventura.
 [[- Vamos nessa Lanna, rumo a uma nova vida! | NoCarro]]
 </tw-passagedata><tw-passagedata pid="20" name=" NoCarro" tags="" position="1650,245">Lanna para o carro em frente a uma cafeteria e me pergunta: - Você confia em mim?
-Sim (click:&quot;Sim&quot;)´[(set:$teamo to 0)(goto:&quot;cafeteria&quot;)] 
-Eu te amo (click:&quot;Eu te amo&quot;)´[(set:$teamo to 1)(goto:&quot;cafeteria&quot;)]
+[Sim (click:&quot;Sim&quot;)[(set:$teamo to 0)(goto:&quot;cafeteria&quot;)]] 
+[Eu te amo (click:&quot;Eu te amo&quot;)[(set:$teamo to 1)(goto:&quot;cafeteria&quot;)]]
 </tw-passagedata><tw-passagedata pid="21" name=" IgnorarDor" tags="" position="1207,352">Essa dor vai passar, não quero parar, não agora...
 MINHA CABEÇA!!! Não estou conseguindo enxergar! O remé[[...|Início]]
 </tw-passagedata><tw-passagedata pid="22" name=" TomarComprimido" tags="" position="1321,352">O comprimido! Lembrei que estavam no meu bolso.
